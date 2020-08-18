@@ -221,9 +221,7 @@ h5:hover {
             sleep(mt_rand(127, 132));
             $client->takeScreenshot('shot3.png');        
         } 
-        if(array_key_exists('button1', $_POST)) { 
-            button1(); 
-        } 
+        
 ?>
 <form method="post"> 
         <input type="submit" name="button1"
