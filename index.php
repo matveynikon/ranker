@@ -213,15 +213,11 @@ h5:hover {
        $client = \Panther\Client::createChromeClient();
        sleep(1);
        $crawler = $client->request('GET', 'https://www.youtube.com/results?search_query=php+web+scraping&sp=EgIIBA%253D%253D');
-       sleep(4);
-       $client->takeScreenshot('shot.png');
+       sleep(2);
        $link = $crawler->selectLink('php web scraping tutorial(simple)')->link();
        $crawler = $client->click($link);
        echo('jeff');
-       sleep(1);
-       $client->takeScreenshot('shot2.png');
-       sleep(mt_rand(127, 132));
-       $client->takeScreenshot('shot3.png');   
+       sleep(1);   
    }
 ?> 
 <form method="post"> 
