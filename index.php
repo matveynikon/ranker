@@ -212,7 +212,9 @@ h5:hover {
         } 
         function button1() { 
             require 'vendor/autoload.php';  
-            $client = \Symfony\Component\Panther\Client::createChromeClient();
+            $client = \Symfony\Component\Panther\Client::createChromeClient(null, [
+                '--headfull'
+                ]);
             sleep(1);
             $crawler = $client->request('GET', 'https://www.youtube.com/results?search_query=php+web+scraping&sp=EgIIBA%253D%253D');
             sleep(4);
