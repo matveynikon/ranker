@@ -101,29 +101,6 @@
 
 }
 
-.img {
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  background-image: url('an.jpg');
-  height: 700px;
-  background-position: center;
-}
-
-.img2 {
-  background-image: url('p2.jpg');
-  height: 1500px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.img3 {
-  background-image: url('pg.jpg');
-  height: 1500px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 
 h1 {
    font-family: myFirstFont;
@@ -229,8 +206,6 @@ h5:hover {
 <h1>Crack the social media algorithm for explosive social growth</h1>
 <h5><a href="services.html"><font color="black">Get started!</font></a></h5>
 <h2>How it works</h2>
-<div class="img3">
-</div>
 <?php
         if(array_key_exists('button1', $_POST)) { 
             button1(); 
