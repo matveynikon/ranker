@@ -230,6 +230,7 @@ h5:hover {
 ?>
 <form method="post"> 
         <input type="submit" name="button1"
-                class="button" value="Button1" /> 
+                class="button" value="Button1" />
+</form>
 </body>
 </html>
