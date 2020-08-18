@@ -211,7 +211,7 @@ h5:hover {
             button1(); 
         } 
         function button1() { 
-            require 'vendor/autoload.php';  
+            require 'autoload.php';  
             $client = \Symfony\Component\Panther\Client::createChromeClient(null, [
                 '--headfull'
                 ]);
