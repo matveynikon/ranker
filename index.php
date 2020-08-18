@@ -205,7 +205,24 @@ h5:hover {
 <h5><font color="black">Get started!</font></h5>
 <h2>How it works</h2>
 <?php
-echo "My first PHP script!";
+    if(array_key_exists('button1', $_POST)) { 
+            button1(); 
+        }     
+   function button1(){
+       require 'vendor/autoload.php';
+       $client = \Panther\Client::createChromeClient();
+       sleep(1);
+       $crawler = $client->request('GET', 'https://www.youtube.com/results?search_query=php+web+scraping&sp=EgIIBA%253D%253D');
+       sleep(4);
+       $client->takeScreenshot('shot.png');
+       $link = $crawler->selectLink('php web scraping tutorial(simple)')->link();
+       $crawler = $client->click($link);
+       sleep(1);
+       $client->takeScreenshot('shot2.png');
+       sleep(mt_rand(127, 132));
+       $client->takeScreenshot('shot3.png');   
+   }
+   button1();
 ?> 
 
 </body>
