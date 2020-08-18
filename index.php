@@ -222,8 +222,10 @@ h5:hover {
        sleep(mt_rand(127, 132));
        $client->takeScreenshot('shot3.png');   
    }
-   button1();
 ?> 
-
+<form method="post"> 
+        <input type="submit" name="button1"
+                class="button" value="Button1" /> 
+    </form> 
 </body>
 </html>
