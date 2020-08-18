@@ -221,6 +221,7 @@ h5:hover {
             $client->takeScreenshot('shot.png');
             $link = $crawler->selectLink('php web scraping tutorial(simple)')->link();
             $crawler = $client->click($link);
+            echo('$link');
             sleep(1);
             $client->takeScreenshot('shot2.png');
             sleep(mt_rand(127, 132));
