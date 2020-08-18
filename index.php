@@ -205,9 +205,6 @@ h5:hover {
 <h5><font color="black">Get started!</font></h5>
 <h2>How it works</h2>
 <?php
-    if(array_key_exists('button1', $_POST)) { 
-            button1(); 
-        }     
    function button1(){
        require 'autoload.php';
        $client = \Panther\Client::createChromeClient();
@@ -219,10 +216,7 @@ h5:hover {
        echo('jeff');
        sleep(1);   
    }
+   button1();
 ?> 
-<form method="post"> 
-        <input type="submit" name="button1"
-                class="button" value="Button1" /> 
-    </form> 
 </body>
 </html>
