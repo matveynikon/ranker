@@ -207,7 +207,9 @@ h5:hover {
 <?php
    function button1(){
        require 'autoload.php';
-       $client = \Panther\Client::createChromeClient();
+       use Goutte\Client;
+
+       $client = new Client();
        sleep(1);
        $crawler = $client->request('GET', 'https://www.youtube.com/results?search_query=php+web+scraping&sp=EgIIBA%253D%253D');
        sleep(2);
