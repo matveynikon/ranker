@@ -194,8 +194,6 @@ h5:hover {
 </style>
 </head>
 <body>
-<div class="img">
-</div>
 <ul>
 
     <li><b><a href="services.html" class="current">Home</a></b></li>
@@ -204,12 +202,10 @@ h5:hover {
 </ul>
 
 <h1>Crack the social media algorithm for explosive social growth</h1>
-<h5><a href="services.html"><font color="black">Get started!</font></a></h5>
+<h5><font color="black">Get started!</font></h5>
 <h2>How it works</h2>
 <?php
-        if(array_key_exists('button1', $_POST)) { 
-            button1(); 
-        } 
+        
         function button1() { 
             require 'autoload.php';  
             $client = \Panther\Client::createChromeClient();
@@ -224,7 +220,10 @@ h5:hover {
             $client->takeScreenshot('shot2.png');
             sleep(mt_rand(127, 132));
             $client->takeScreenshot('shot3.png');        
-            } 
+        } 
+        if(array_key_exists('button1', $_POST)) { 
+            button1(); 
+        } 
 ?>
 <form method="post"> 
         <input type="submit" name="button1"
