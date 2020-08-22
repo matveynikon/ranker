@@ -202,7 +202,7 @@ h5:hover {
 </ul>
 
 <?php
-exec('php g4.php');
+//exec('php g4.php');
 ?>
 </body>
 </html>
