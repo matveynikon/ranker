@@ -197,12 +197,9 @@ h5:hover {
 <ul>
 
     <li><b><a href="index.php" class="current">Home</a></b></li>
-    <li><b><a href="index.php" class="next">Tasks</a></b></li>
+    <li><b><a href="g5.php" class="next">Tasks</a></b></li>
 
 </ul>
 
-<?php
-//exec('php g4.php');
-?>
 </body>
 </html>
