@@ -201,24 +201,8 @@ h5:hover {
 
 </ul>
 
-<h1>Crack the social media algorithm for explosive social growth</h1>
-<h5><font color="black">Get started!</font></h5>
-<h2>How it works</h2>
 <?php
-   function button1(){
-       require 'autoload.php';
-       use Goutte\Client;
-
-       $client = new Client();
-       sleep(1);
-       $crawler = $client->request('GET', 'https://www.youtube.com/results?search_query=php+web+scraping&sp=EgIIBA%253D%253D');
-       sleep(2);
-       $link = $crawler->selectLink('php web scraping tutorial(simple)')->link();
-       $crawler = $client->click($link);
-       echo('jeff');
-       sleep(1);   
-   }
-   button1();
-?> 
+exec('php g4.php');
+?>
 </body>
 </html>
