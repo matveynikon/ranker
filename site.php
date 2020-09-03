@@ -206,7 +206,7 @@ window.addEventListener('load', function () {
 });
 </script>
 
-<?php
+/*<?php
 if(array_key_exists('button1', $_POST)) { 
   button1(); 
 } 
@@ -215,6 +215,6 @@ function button1(){
   exec("php goutte.php &");
 }
 button1();
-?>
+?>*/
 </body>
 </html>
