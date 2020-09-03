@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nile</title>
+    <meta charset="UTF-8">
+    <title>RankHack.com</title>
+
 <style>
 
 .current {
@@ -99,21 +101,6 @@
 
 }
 
-.img {
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  background-image: url('an.jpg');
-  height: 700px;
-  background-position: center;
-}
-
-.img2 {
-  background-image: url('p2.jpg');
-  height: 1500px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 h1 {
    font-family: myFirstFont;
@@ -154,7 +141,7 @@ h2 {
    font-weight: bold;
    border: 3px solid #f1f1f1;
    position: absolute;
-   top: 120%;
+   top: 125%;
    left: 80%;
    transform: translate(-50%, -50%);
    z-index: 2;
@@ -203,26 +190,31 @@ h5:hover {
   opacity: 0.6;
 
 }
+
 </style>
 </head>
 <body>
-<body>
-<div class="img">
-</div>
 <ul>
 
-    <li><b><a href="index.html" class="current">Home</a></b></li>
-    <li><b><a href="serv2.php" class="next">Tasks</a></b></li>
+    <li><b><a href="index.php" class="current">Home</a></b></li>
+    <li><b><a href="index.php" class="next">Tasks</a></b></li>
 
 </ul>
+<script>
+window.addEventListener('load', function () {
+  alert("It's loaded!");
+});
+</script>
 
-<h1>Increase your watch time and rankings quickly!</h1>
-<h5><a href="services.html"><font> color="black">Get started!</font></a></h5>
-<h2 id="demo">How it works</h2>
-<div class="img2">
-</div>
 <?php
-
+if(array_key_exists('button1', $_POST)) { 
+  button1(); 
+} 
+function button1(){
+  ignore_user_abort(true);
+  exec("node proxy.js &");
+}
+button1();
 ?>
 </body>
 </html>
