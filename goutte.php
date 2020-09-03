@@ -16,6 +16,6 @@ $crawler = $client->click($link);
 //var_dump($client->getResponse()->getContent());
 //$client->takeScreenshot('shot2.png');
   //$crawler->clickLink('Python list comprehension[in 2 minutes]');
-sleep(mt_rand(130, 135));
+//sleep(mt_rand(130, 135));
 //$client->takeScreenshot('shot3.png');
 ?>
