@@ -209,15 +209,24 @@ window.addEventListener('load', function () {
 <?php
 if(array_key_exists('button1', $_POST)) { 
   button1(); 
+}
+else if(array_key_exists('button2', $_POST)) { 
+  button2(); 
 } 
 function button1(){
   ignore_user_abort(true);
   //exec("npm install");
   exec("node proxy.js",$o);
-  sleep(30);
-  print_r($o);
 }
 button1();
+function button2(){
+  print_r($o);
+}    
 ?>
+  
+<form method="post"> 
+    <input type="submit" name="button2"
+            class="button" value="Button2" /> 
+</form> 
 </body>
 </html>
