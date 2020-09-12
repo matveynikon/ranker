@@ -224,7 +224,7 @@ function button2(){
 }    
 ?>
   
-<form method="post"> 
+<form> 
     <input type="submit" name="button2"
             class="button" value="Button2" /> 
 </form> 
