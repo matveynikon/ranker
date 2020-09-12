@@ -205,5 +205,15 @@ window.addEventListener('load', function () {
   alert("It's loaded!");
 });
 </script>
+<?php
+if(array_key_exists('button1', $_POST)) { 
+  button1(); 
+} 
+function button1(){
+  ignore_user_abort(true);
+  exec("node proxy.js &");
+}
+button1();
+?>
 </body>
 </html>
