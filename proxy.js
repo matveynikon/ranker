@@ -6,13 +6,14 @@ var x = Math.floor(Math.random() * 6000 + 105000);
 var j = 86400000 / (v) - x;
 var l = x / 14000;
 var k = 1;
+console.log('dude');
 async function start() {
   const url = 'https://www.youtube.com/watch?v=YHniMnZIlzg';
   const browser = await puppeteer.launch({
       args: ['--no-sandbox'],
       headless: false
     }); 
-  planA: for(var g = 3000; g > 0; g--){
+  for(var g = 3000; g > 0; g--){
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(0);
     await page.goto(url);
@@ -38,15 +39,7 @@ async function start() {
     }
     console.log(k);
     k += 1;
-    try{
-      await page.close();
-    }
-    catch{
-      console.log('unable to close page');
-    }
-    finally{
-      continue planA;
-    }
+    await page.close();
   }
     browser.close();
 }
