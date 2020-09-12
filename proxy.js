@@ -28,7 +28,7 @@ async function start() {
     for(var c = Math.floor(x / 14000); c > 0; c--){
       var h = x / l;
       console.log(h);
-      await page.waitFor(h);
+      //await page.waitFor(h);
       element = ('.ytp-ad-skip-button-container');
       try{
         await page.click(element);
