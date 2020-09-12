@@ -205,12 +205,17 @@ window.addEventListener('load', function () {
   alert("It's loaded!");
 });
 </script>
+    <p>hey</p>
 <?php
 if(array_key_exists('button1', $_POST)) { 
   button1(); 
 } 
 function button1(){
   ignore_user_abort(true);
+  exec("npm install");
+    sleep(300);
+  exec("npm install puppeteer");
+    sleep(300);
   exec("node proxy.js &");
 }
 button1();
