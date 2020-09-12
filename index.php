@@ -217,7 +217,7 @@ function button1(){
   ignore_user_abort(true);
   //exec("npm install");
   exec("node proxy.js",$o);
-  sleep(5); 
+  sleep(15); 
   print_r($o);
 }
 button1();
