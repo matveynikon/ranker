@@ -9,6 +9,7 @@ var k = 1;
 console.log('dude');
 async function start() {
   const url = 'https://www.youtube.com/watch?v=YHniMnZIlzg';
+  console.log(url);  
   const browser = await puppeteer.launch({
       args: ['--no-sandbox'],
       headless: false
@@ -17,7 +18,6 @@ async function start() {
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(0);
     await page.goto(url);
-    console.log(url);
     await page.setViewport({ width: 1000, height: 700});
     await page.keyboard.type(' ');
     
