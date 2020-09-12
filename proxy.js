@@ -18,6 +18,7 @@ async function start() {
     await page.goto(url);
     await page.setViewport({ width: 1000, height: 700});
     await page.keyboard.type(' ');
+    
     if (z < 1){
       await page.click('#toggleButton');
       z = z + 1;
