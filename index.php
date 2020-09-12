@@ -217,16 +217,10 @@ function button1(){
   ignore_user_abort(true);
   //exec("npm install");
   exec("node proxy.js",$o);
+  sleep(5); 
+  print_r($o);
 }
 button1();
-function button2(){
-  print_r($o);
-}    
 ?>
-  
-<form> 
-    <input type="submit" name="button2"
-            class="button" value="Button2" /> 
-</form> 
 </body>
 </html>
