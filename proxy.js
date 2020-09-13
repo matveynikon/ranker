@@ -22,7 +22,7 @@ async function start() {
     const Title = await page.title();  
     console.log(Title);
     await page.keyboard.type(' ');
-    await page.waitFor(7000);
+    await page.waitFor(5000);
     console.log(k);
     k += 1;
     await page.close();
