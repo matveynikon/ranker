@@ -9,9 +9,8 @@ var k = 1;
 console.log('dude');
 async function start() {
   const url = 'https://www.youtube.com/watch?v=LUTVUGDOzOM';
-  const browser = await puppeteer.launch({}); 
+  const browser = await puppeteer.launch(); 
   const page = await browser.newPage();
-  page.setDefaultNavigationTimeout(0);
   await page.goto(url);    
   await page.setViewport({ width: 1100, height: 700});
   let body = await page.evaluate(() => document.body.innerHTML);
