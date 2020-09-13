@@ -17,8 +17,8 @@ async function start() {
     page.setDefaultNavigationTimeout(0);
     await page.goto(url);    
     await page.setViewport({ width: 1100, height: 700});
-    const Title = await page.title();  
-    console.log(Title);
+    let body = await page.evaluate(() => document.body.innerHTML);
+    console.log(body);
     await page.keyboard.type(' ');
     await page.waitFor(5000);
     console.log(k);
