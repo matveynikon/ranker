@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-var k = 1;
+varvnc k = 1;
 var z = 0;
 var v = 2000;
 var x = Math.floor(Math.random() * 6000 + 105000);
