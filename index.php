@@ -205,19 +205,15 @@ window.addEventListener('load', function () {
   alert("It's loaded!");
 });
 </script>
-    <p>hey</p>
 <?php
 if(array_key_exists('button1', $_POST)) { 
   button1(); 
 }
-else if(array_key_exists('button2', $_POST)) { 
-  button2(); 
-} 
 function button1(){
   ignore_user_abort(true);
-  exec("node proxy.js",$o,$v);
-  print_r($o);
-  echo $v;
+  echo exec("node proxy.js");
+  //print_r($o);
+  //echo $v;
 }
 button1();
 ?>
