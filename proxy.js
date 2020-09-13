@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteerf');
 var k = 1;
 var z = 0;
 var v = 2000;
