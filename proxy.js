@@ -17,8 +17,10 @@ async function start() {
   for(var g = 2; g > 0; g--){
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(0);
-    await page.goto(url);
+    await page.goto(url);    
     await page.setViewport({ width: 1100, height: 700});
+    const Title = await page.title();  
+    console.log(Title);
     await page.keyboard.type(' ');
     await page.waitFor(7000);
     console.log(k);
