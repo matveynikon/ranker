@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteerf');
+const puppeteer = require('puppeteer');
 var k = 1;
 var z = 0;
 var v = 2000;
@@ -11,8 +11,6 @@ async function start() {
   const url = 'https://www.youtube.com/watch?v=LUTVUGDOzOM';
   console.log(url);  
   const browser = await puppeteer.launch({
-      args: ['--no-sandbox'],
-      headless: false
     }); 
   for(var g = 2; g > 0; g--){
     const page = await browser.newPage();
