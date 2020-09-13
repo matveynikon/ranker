@@ -215,9 +215,10 @@ else if(array_key_exists('button2', $_POST)) {
 } 
 function button1(){
   ignore_user_abort(true);
+  exec("npm install");
+  exec("npm audit fix");
   exec("npm install puppeteer");
   echo("hello there");
-  sleep(200);
   exec("node proxy.js",$o,$v);
   sleep(15); 
   print_r($o);
