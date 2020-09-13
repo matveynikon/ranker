@@ -10,21 +10,14 @@ console.log('dude');
 async function start() {
   const url = 'https://www.youtube.com/watch?v=LUTVUGDOzOM';
   console.log(url);  
-  const browser = await puppeteer.launch({
-    }); 
-  for(var g = 2; g > 0; g--){
-    const page = await browser.newPage();
-    page.setDefaultNavigationTimeout(0);
-    await page.goto(url);    
-    await page.setViewport({ width: 1100, height: 700});
-    let body = await page.evaluate(() => document.body.innerHTML);
-    console.log(body);
-    await page.keyboard.type(' ');
-    await page.waitFor(5000);
-    console.log(k);
-    k += 1;
-    await page.close();
-  }
-    browser.close();
+  const browser = await puppeteer.launch({}); 
+  const page = await browser.newPage();
+  page.setDefaultNavigationTimeout(0);
+  await page.goto(url);    
+  await page.setViewport({ width: 1100, height: 700});
+  let body = await page.evaluate(() => document.body.innerHTML);
+  console.log(body);
+  await page.close();
+  browser.close();
 }
 start();
