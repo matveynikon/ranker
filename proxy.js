@@ -9,6 +9,7 @@ var k = 1;
 console.log('dude');
 async function start() {
   const url = 'https://www.youtube.com/watch?v=LUTVUGDOzOM';
+  console.log('j');
   const browser = await puppeteer.launch();
   console.log(url);  
   const page = await browser.newPage();
