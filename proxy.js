@@ -11,12 +11,13 @@ async function start() {
   const url = 'https://www.youtube.com/watch?v=LUTVUGDOzOM';
   const browser = await puppeteer.launch(); 
   const page = await browser.newPage();
+  console.log(url);
   await page.goto(url);    
   await page.setViewport({ width: 1100, height: 700});
   let body = await page.evaluate(() => document.body.innerHTML);
   console.log(body);
   await page.close();
-  console.log(url);  
+  //console.log(url);  
   browser.close();
 }
 start();
