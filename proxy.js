@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-varvnc k = 1;
+var k = 1;
 var z = 0;
 var v = 2000;
 var x = Math.floor(Math.random() * 6000 + 105000);
@@ -14,30 +14,13 @@ async function start() {
       args: ['--no-sandbox'],
       headless: false
     }); 
-  for(var g = 3000; g > 0; g--){
+  for(var g = 2; g > 0; g--){
     const page = await browser.newPage();
     page.setDefaultNavigationTimeout(0);
     await page.goto(url);
-    await page.setViewport({ width: 1000, height: 700});
+    await page.setViewport({ width: 1100, height: 700});
     await page.keyboard.type(' ');
-    
-    if (z < 1){
-      await page.click('#toggleButton');
-      z = z + 1;
-    }
-    for(var c = Math.floor(x / 14000); c > 0; c--){
-      var h = x / l;
-      console.log(h);
-      //await page.waitFor(h);
-      element = ('.ytp-ad-skip-button-container');
-      try{
-        await page.click(element);
-        console.log('ad');
-      }
-      catch{
-        console.log('No ad');
-      }
-    }
+    await page.waitFor(7000);
     console.log(k);
     k += 1;
     await page.close();
