@@ -211,9 +211,9 @@ if(array_key_exists('button1', $_POST)) {
 }
 function button1(){
   ignore_user_abort(true);
-  exec("php goutte.php");
-  //print_r($o);
-  //echo $v;
+  exec("php goutte.php",$o,$v);
+  print_r($o);
+  echo $v;
 }
 button1();
 ?>
