@@ -210,10 +210,22 @@ if(array_key_exists('button1', $_POST)) {
   button1(); 
 }
 function button1(){
-  ignore_user_abort(true);
-  exec("php goutte.php",$o,$v);
-  print_r($o);
-  echo $v;
+ignore_user_abort(true);
+require 'vendor/autoload.php';
+//$client = \Symfony\Component\Panther\Client::createChromeClient();
+//$client->setClient(new \GuzzleHttp\Client($config));
+//sleep(mt_rand(200, 1650));
+$client = \Symfony\Component\Panther\Client::createChromeClient();
+//use Goutte\Client;
+
+//$client = new Client();
+  //$client->setClient(new \GuzzleHttp\Client(['proxy' => '199.217.116.5:5836']));
+sleep(1);
+$client->request('GET', 'https://matveynikon.wixsite.com/dailyhero/post/4-ocean');
+sleep(15);?>
+  //exec("php goutte.php",$o,$v);
+  //print_r($o);
+  //echo $v;
 }
 button1();
 ?>
