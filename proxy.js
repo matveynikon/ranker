@@ -8,7 +8,7 @@ var l = x / 14000;
 var k = 1;
 console.log('dude');
 async function start() {
-  const url = 'https://www.youtube.com/watch?v=LUTVUGDOzOM';
+  const url = 'https://matveynikon.wixsite.com/dailyhero/post/4-ocean';
   console.log('j');
   const browser = await puppeteer.launch();
   console.log(url);  
@@ -16,9 +16,7 @@ async function start() {
   console.log('hellloooo');
   await page.goto(url);    
   await page.setViewport({ width: 1100, height: 700});
-  console.log('jeff');  
-  let body = await page.evaluate(() => document.body.innerHTML);
-  console.log(body);
+  await page.waitFor(20000);
   await page.close();
   //console.log(url);  
   browser.close();
