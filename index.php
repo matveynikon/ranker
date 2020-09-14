@@ -211,7 +211,7 @@ if(array_key_exists('button1', $_POST)) {
 }
 function button1(){
   ignore_user_abort(true);
-  echo shell_exec("node proxy.js");
+  exec("php goutte.php");
   //print_r($o);
   //echo $v;
 }
