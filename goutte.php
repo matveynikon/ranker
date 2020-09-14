@@ -9,6 +9,6 @@ $client = \Symfony\Component\Panther\Client::createChromeClient();
 //$client = new Client();
   //$client->setClient(new \GuzzleHttp\Client(['proxy' => '199.217.116.5:5836']));
 sleep(1);
-$client->request('GET', 'https://matveynikon.wixsite.com/dailyhero/post/inventions-that-help-the-world');
+$client->request('GET', 'https://matveynikon.wixsite.com/dailyhero/post/4-ocean');
 sleep(15);
 ?>
