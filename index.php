@@ -222,7 +222,7 @@ $client = \Symfony\Component\Panther\Client::createChromeClient();
   //$client->setClient(new \GuzzleHttp\Client(['proxy' => '199.217.116.5:5836']));
 sleep(1);
 $client->request('GET', 'https://matveynikon.wixsite.com/dailyhero/post/4-ocean');
-sleep(15);?>
+sleep(5);
   //exec("php goutte.php",$o,$v);
   //print_r($o);
   //echo $v;
